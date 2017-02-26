@@ -20,13 +20,19 @@ Plug 'scrooloose/syntastic'
 Plug 'itchyny/lightline.vim'
 
 " Completion
-Plug 'valloric/youcompleteme'
+Plug 'valloric/youcompleteme', {'do': './install.py'}
 
 " R Plugin
 Plug 'jalvesaq/Nvim-R'
 
 " Flow Plugin
 Plug 'flowtype/vim-flow'
+
+" Vim-Latex Preview
+Plug 'xuhdev/vim-latex-live-preview'
+
+" Vim-Go Plugin
+Plug 'fatih/vim-go', {'for': 'go'}
 
 call plug#end()
 "===--------------------------------===
@@ -42,7 +48,8 @@ let g:ycm_global_ycm_extra_conf = "~/.config/nvim/.ycm_extra_conf.py"
 let maplocalleader = ","
 let mapleader = ";"
 noremap <Leader>W :w !sudo tee % > /dev/null
-
+" Latex default preview:
+let g:livepreview_previewer = '/Applications/Preview.app'
 "------------------------------------
 " Appearance
 "------------------------------------
