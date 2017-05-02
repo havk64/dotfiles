@@ -9,7 +9,7 @@
 	smudge = git-lfs smudge %f
 	required = true
 [core]
-	autocrlf = false
+	autocrlf = input
 	safecrlf = true
 [alias]
 	lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
@@ -22,3 +22,6 @@
 	br = branch
 	ci = commit
 	uns = reset HEAD --
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
