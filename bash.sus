@@ -1,6 +1,7 @@
 card bash {
 	into ~
 
+	.bashrc
 	.emacs
 	.gitconfig
 	.vimrc
