@@ -8,16 +8,14 @@ case $- in
       *) return;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
+### Added by Toptal tips:
+### (Share the bash history across multiple sessions)
+HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+## Unlimited bash history:
+HISTSIZE=
+HISTFILESIZE=
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -88,6 +86,14 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias gcam='git commit -am'
+alias gcm='git commit -m'
+alias gpom='git push origin master'
+alias krails='bin/rails'
+alias gst='git status .'
+alias gdif='git diff'
+alias gds='git diff --staged'
+alias gtp='git log --pretty=oneline --graph --decorate --all'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
