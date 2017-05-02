@@ -4,8 +4,8 @@ export PATH="$PATH:$HOME/.node/bin"
 ### Added for PostgreSQL run locally
 ### export DATABASE_URL=postgres:///$(whoami)
 
-### Added by "Me" to get javascripting working :)
-export PATH=$PATH:/Users/alexandro/.node/bin
+### Added by me for liquidprompt
+[[ $- = *i* ]] && source "$HOME/liquidprompt/liquidprompt"
 
 ### Added by NVM install through HomeBrew:
 export NVM_DIR=~/.nvm
