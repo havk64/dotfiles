@@ -9,7 +9,7 @@ dotfiles='http://dotfiles.github.io/'
 tmpfile=github_parsed
 
 # Extract valid github addresses:
-curl "$dotfiles" | pup 'a[href] attr{href}' | grep -r 'https?://github.com' |
+curl "$dotfiles" | pup 'a[href] attr{href}' |
 # Match only valid github repositories:
 sed -nr '/https?:\/\/github.com\/[[:alnum:].-]+\/[[:alnum:].-]+\/?$/p' |
 # Fix schema url(https):
@@ -25,4 +25,5 @@ fetch_stars()
 while read -r line; do
 	# grep 'nicksp' <<< "$line" &> /dev/null && stars=$(fetch_stars "$line")
 	fetch_stars "$line" &
-done <  <(sed -e 's/https:../&api./g; s/github\.com\//&repos\//g; s/\/$//g' $tmpfile)
+done <  <(sed -e 's/https:../&api./g; s/github\.com\//&repos\//g; s/\/$//g' $tmpfile) |
+sort -nrk 2 | uniq
