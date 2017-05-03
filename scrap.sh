@@ -15,17 +15,14 @@ sed -nr '/https?:\/\/github.com\/[[:alnum:].-]+\/[[:alnum:].-]+\/?$/p' |
 # Fix schema url(https):
 sed -e '/http\b/s/http/https/g' > "$tmpfile"
 
-sed -r 's/.*stargazers_count":([[:digit:]]+).*/\1/'
-
 fetch_stars()
 {
 	num_stars=$(curl -s -A "$user_agent" -H "$header" -H "$accept" "$1" |
 	sed -E 's/.*stargazers_count":([[:digit:]]+).*/\1/')
-	printf '%s\n' "$num_stars"
+	printf '%s\t%s\n' "$1" "$num_stars"
 }
 
 while read -r line; do
 	# grep 'nicksp' <<< "$line" &> /dev/null && stars=$(fetch_stars "$line")
-	stars=$(fetch_stars "$line")
-	printf '%s\t%s\n' "$line" "${stars-placeholder}";
+	fetch_stars "$line" &
 done <  <(sed -e 's/https:../&api./g; s/github\.com\//&repos\//g; s/\/$//g' $tmpfile)
