@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # Finds the github repo with more stars
+# Pup is required in order to parse the links:
+# $ go get github.com/ericchiang/pup
 
 token=9f5400d5762cdca712e84b8c921cfa801c3dbeb6
 user_agent='Holberton School' # or havk64
