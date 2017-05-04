@@ -11,7 +11,7 @@ dotfiles='http://dotfiles.github.io/'
 output=result.out
 
 mainpage() {
-	# Extract valid github addresses:
+	# Extract valid github addresses using 'pup':
 	curl -s "$dotfiles" | pup 'a[href] attr{href}' |
 	# Match only valid github repositories:
 	sed -nE '/https?:\/\/github.com\/[[:alnum:].-]+\/[[:alnum:].-]+\/?$/p' |
@@ -31,3 +31,5 @@ fetch_stars()
 while read -r line; do
 	fetch_stars "$line" &
 done <  <(mainpage) | sort -nrk 2 | uniq > "$output"
+
+exit
