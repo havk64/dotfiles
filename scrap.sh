@@ -6,15 +6,18 @@ user_agent='Holberton School' # or havk64
 header="Authorization: token $token"
 accept='Accept: application/vnd.github.v3+json'
 dotfiles='http://dotfiles.github.io/'
-tmpfile=github_parsed
 output=result.out
 
-# Extract valid github addresses:
-curl "$dotfiles" | pup 'a[href] attr{href}' |
-# Match only valid github repositories:
-sed -nr '/https?:\/\/github.com\/[[:alnum:].-]+\/[[:alnum:].-]+\/?$/p' |
-# Fix schema url(https):
-sed -e '/http\b/s/http/https/g' > "$tmpfile"
+mainpage() {
+	# Extract valid github addresses:
+	curl -s "$dotfiles" | pup 'a[href] attr{href}' |
+	# Match only valid github repositories:
+	sed -nE '/https?:\/\/github.com\/[[:alnum:].-]+\/[[:alnum:].-]+\/?$/p' |
+	# Fix schema url(https):
+	sed -e '/^http:/s/http/https/g' |
+	# Format the url to fetch each github repo page
+	sed -e 's/https:../&api./g; s/github\.com\//&repos\//g; s/\/$//g'
+}
 
 fetch_stars()
 {
@@ -24,7 +27,5 @@ fetch_stars()
 }
 
 while read -r line; do
-	# grep 'nicksp' <<< "$line" &> /dev/null && stars=$(fetch_stars "$line")
 	fetch_stars "$line" &
-done <  <(sed -e 's/https:../&api./g; s/github\.com\//&repos\//g; s/\/$//g' $tmpfile) |
-sort -nrk 2 | uniq > "$output"
+done <  <(mainpage) | sort -nrk 2 | uniq > "$output"
