@@ -12,7 +12,7 @@ output=result.out
 
 mainpage() {
 	# Extract valid github addresses using 'pup':
-	curl -s "$dotfiles" | pup 'a[href] attr{href}' |
+	curl -sL "$dotfiles" | pup 'a[href] attr{href}' |
 	# Match only valid github repositories:
 	sed -nE '/https?:\/\/github.com\/[[:alnum:].-]+\/[[:alnum:].-]+\/?$/p' |
 	# Fix schema url(https):
@@ -23,9 +23,9 @@ mainpage() {
 
 fetch_stars()
 {
-	num_stars=$(curl -s -A "$user_agent" -H "$header" -H "$accept" "$1" |
+	num_stars=$(curl -sL -A "$user_agent" -H "$header" -H "$accept" "$1" |
 	sed -E 's/.*stargazers_count":([[:digit:]]+).*/\1/')
-	printf '%-60s\t%7s\n' "$1" "$num_stars"
+	printf '%-70s\t%7s\n' "$1" "$num_stars"
 }
 
 while read -r line; do
