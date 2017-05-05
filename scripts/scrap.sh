@@ -14,8 +14,9 @@ dotfiles='http://dotfiles.github.io/'
 output=result.out
 
 mainpage() {
-	# Extract valid github addresses using 'pup':
+	# Extract urls from html using 'pup':
 	curl -sL "$dotfiles" | pup 'a[href] attr{href}' |
+	# Parses and filter github addresses
 	sed -nE '{
 	# Match only valid github repositories:
 	/https?:\/\/github.com\/[[:alnum:].-]+\/[[:alnum:].-]+\/?$/!d
@@ -32,6 +33,7 @@ mainpage() {
 
 fetch_stars()
 {
+	# Fetches each github repo information and extracts the number of stars
 	response=$(curl -sLA "$user_agent" -H "$header" -H "$accept" "$1" |
 	sed -E 's/.*stargazers_count":([[:digit:]]+).*/\1/')
 	owner=$(sed -E 's/([^/]+)\/.*/\1/' <<< "${1:29}")
@@ -39,8 +41,10 @@ fetch_stars()
 	printf '%-20s\t%-30s\t%7s\n' "$owner" "$repo" "$response"
 }
 
+# Assing to 'head' variable the format of output(similar to sprintf)
 printf -v head '%-20s\t%-30s\t%7s\n' "Owner" "Repository" "Number of Stars"
 
+# Parses/fetches each github repo in sequence(using process substitution) async
 while read -r line; do
 	fetch_stars "$line" &
 done <  <(mainpage) | sort -nrk 3 | uniq |
