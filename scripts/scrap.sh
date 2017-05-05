@@ -3,8 +3,8 @@
 # Pup is required in order to parse the links:
 # $ go get github.com/ericchiang/pup
 
-token=9f5400d5762cdca712e84b8c921cfa801c3dbeb6
-user_agent='Holberton School' # or havk64
+token="${GITHUB_TOKEN}" # Defined as an environment variable
+user_agent=havk64
 header="Authorization: token $token"
 accept='Accept: application/vnd.github.v3+json'
 dotfiles='http://dotfiles.github.io/'
