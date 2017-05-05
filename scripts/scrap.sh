@@ -29,7 +29,7 @@ mainpage() {
 
 fetch_stars()
 {
-	response=$(curl -sL -A "$user_agent" -H "$header" -H "$accept" "$1" |
+	response=$(curl -sLA "$user_agent" -H "$header" -H "$accept" "$1" |
 	sed -E 's/.*stargazers_count":([[:digit:]]+).*/\1/')
 	owner=$(sed -E 's/([^/]+)\/.*/\1/' <<< "${1:29}")
 	repo=$(sed -E 's/[^/]+\/(.*)/\1/' <<< "${1:29}")
