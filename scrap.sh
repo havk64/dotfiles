@@ -36,6 +36,6 @@ fetch_stars()
 
 while read -r line; do
 	fetch_stars "$line" &
-done <  <(mainpage) | sort -nrk 2 | uniq > "$output"
+done <  <(mainpage) | sort -nrk 2 | uniq # > "$output" # Optionally prints a report
 
 exit
