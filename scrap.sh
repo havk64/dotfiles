@@ -37,9 +37,11 @@ fetch_stars()
 }
 
 printf -v header '%-20s\t%-30s\t%7s\n' "Owner" "Repository" "Number of Stars"
+
 while read -r line; do
 	fetch_stars "$line" &
 done <  <(mainpage) | sort -nrk 3 | uniq |
+# Insert the header before the first line
 sed '1 i\'$'\n'"$header" # > "$output" # Optionally prints a report
 
 exit
