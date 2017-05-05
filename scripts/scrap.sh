@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-# Finds the github repo with more stars
+# This script parses dotfile.github.io page for each github repo,
+# fetches the amount of starts of each one and sorts in reverse order
+# showing most starred repos first
+#
 # Pup is required in order to parse the links:
 # $ go get github.com/ericchiang/pup
 
