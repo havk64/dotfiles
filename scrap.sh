@@ -29,9 +29,9 @@ mainpage() {
 
 fetch_stars()
 {
-	num_stars=$(curl -sL -A "$user_agent" -H "$header" -H "$accept" "$1" |
+	response=$(curl -sL -A "$user_agent" -H "$header" -H "$accept" "$1" |
 	sed -E 's/.*stargazers_count":([[:digit:]]+).*/\1/')
-	printf '%-70s\t%7s\n' "$1" "$num_stars"
+	printf '%-40s\t%7s\n' "${1:29}" "$response"
 }
 
 while read -r line; do
