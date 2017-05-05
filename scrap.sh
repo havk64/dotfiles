@@ -13,12 +13,18 @@ output=result.out
 mainpage() {
 	# Extract valid github addresses using 'pup':
 	curl -sL "$dotfiles" | pup 'a[href] attr{href}' |
+	sed -nE '{
 	# Match only valid github repositories:
-	sed -nE '/https?:\/\/github.com\/[[:alnum:].-]+\/[[:alnum:].-]+\/?$/p' |
+	/https?:\/\/github.com\/[[:alnum:].-]+\/[[:alnum:].-]+\/?$/!d
 	# Fix schema url(https):
-	sed -e '/^http:/s/http/https/g' |
-	# Format the url to fetch each github repo page
-	sed -e 's/https:../&api./g; s/github\.com\//&repos\//g; s/\/$//g'
+	/^http:/s/http/https/
+	# Format the url to fetch each github repo page using github API
+	s/https:../&api./
+	s/github\.com\//&repos\//
+	s/\/$//g
+	p
+	}'
+
 }
 
 fetch_stars()
