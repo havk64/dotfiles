@@ -1,73 +1,74 @@
-https://api.github.com/repos/robbyrussell/oh-my-zsh                   	  53084
-https://api.github.com/repos/github/gitignore                         	  49702
-https://api.github.com/repos/mathiasbynens/dotfiles                   	  16616
-https://api.github.com/repos/gmarik/Vundle.vim                        	  14737
-https://api.github.com/repos/syl20bnr/spacemacs                       	  11657
-https://api.github.com/repos/spf13/spf13-vim                          	  10315
-https://api.github.com/repos/tpope/vim-pathogen                       	   9033
-https://api.github.com/repos/zsh-users/prezto                         	   7524
-https://api.github.com/repos/junegunn/vim-plug                        	   7337
-https://api.github.com/repos/carlhuda/janus                           	   7284
-https://api.github.com/repos/Bash-it/bash-it                          	   6130
-https://api.github.com/repos/lra/mackup                               	   6008
-https://api.github.com/repos/skwp/dotfiles                            	   5370
-https://api.github.com/repos/holman/dotfiles                          	   4447
-https://api.github.com/repos/bbatsov/prelude                          	   3395
-https://api.github.com/repos/zsh-users/antigen                        	   3081
-https://api.github.com/repos/nojhan/liquidprompt                      	   3047
-https://api.github.com/repos/unixorn/awesome-zsh-plugins              	   2673
-https://api.github.com/repos/fisherman/fisherman                      	   2253
-https://api.github.com/repos/oh-my-fish/oh-my-fish                    	   2159
-https://api.github.com/repos/Shougo/neobundle.vim                     	   2068
-https://api.github.com/repos/technicalpickles/homesick                	   1880
-https://api.github.com/repos/webpro/awesome-dotfiles                  	   1755
-https://api.github.com/repos/zsh-users/zsh-completions                	   1564
-https://api.github.com/repos/thoughtbot/rcm                           	   1511
-https://api.github.com/repos/zplug/zplug                              	   1507
-https://api.github.com/repos/jwiegley/use-package                     	   1491
-https://api.github.com/repos/caiogondim/bullet-train-oh-my-zsh-theme  	   1269
-https://api.github.com/repos/RichiH/vcsh                              	   1266
-https://api.github.com/repos/cowboy/dotfiles                          	   1097
-https://api.github.com/repos/anishathalye/dotbot                      	   1078
-https://api.github.com/repos/andsens/homeshick                        	   1044
-https://api.github.com/repos/simonwhitaker/gitignore-boilerplates     	    967
-https://api.github.com/repos/cask/cask                                	    826
-https://api.github.com/repos/freshshell/fresh                         	    778
-https://api.github.com/repos/tarjoilija/zgen                          	    738
-https://api.github.com/repos/paulmillr/dotfiles                       	    661
-https://api.github.com/repos/dotfiles/dotfiles.github.com             	    634
-https://api.github.com/repos/eduardolundgren/dotfiles                 	    421
-https://api.github.com/repos/dotphiles/dotphiles                      	    400
-https://api.github.com/repos/atomantic/dotfiles                       	    294
-https://api.github.com/repos/philips/ghar                             	    246
-https://api.github.com/repos/michaeljsmalley/dotfiles                 	    197
-https://api.github.com/repos/sapegin/dotfiles                         	    171
-https://api.github.com/repos/Tarrasch/antigen-hs                      	    164
-https://api.github.com/repos/driesvints/dotfiles                      	    138
-https://api.github.com/repos/nicksp/dotfiles                          	    130
-https://api.github.com/repos/dotphiles/dotzsh                         	    129
-https://api.github.com/repos/dotphiles/dotsync                        	    124
-https://api.github.com/repos/svetlyak40wt/dotfiler                    	    122
-https://api.github.com/repos/changs/slimzsh                           	    118
-https://api.github.com/repos/ellipsis/ellipsis                        	    110
-https://api.github.com/repos/FooSoft/homemaker                        	    104
-https://api.github.com/repos/dotphiles/dotvim                         	    100
-https://api.github.com/repos/unixorn/zsh-quickstart-kit               	     96
-https://api.github.com/repos/jh3y/kody                                	     65
-https://api.github.com/repos/pearl-core/pearl                         	     57
-https://api.github.com/repos/NorfairKing/super-user-spark             	     56
-https://api.github.com/repos/wking/dotfiles-framework                 	     46
-https://api.github.com/repos/andschwa/dotfiles                        	     35
-https://api.github.com/repos/Kraymer/F-dotfiles                       	     34
-https://api.github.com/repos/jglovier/dotfiles-logo                   	     27
-https://api.github.com/repos/ashishb/dotfiles                         	     27
-https://api.github.com/repos/vibhavp/dotty                            	     25
-https://api.github.com/repos/posquit0/dotfiles                        	     23
-https://api.github.com/repos/moonglum/exogenesis                      	     15
-https://api.github.com/repos/jeffaco/dotfiles                         	     15
-https://api.github.com/repos/deadc0de6/dotdrop                        	     12
-https://api.github.com/repos/williamsmj/stowsh                        	     10
-https://api.github.com/repos/rkalis/dotfiles                          	      7
-https://api.github.com/repos/mihaliak/dotfiles                        	      5
-https://api.github.com/repos/wking/dotfiles-public                    	      3
-https://api.github.com/repos/bndabbs/dotfiles                         	      2
+Owner               	Repository                    	Number of Stars
+robbyrussell        	oh-my-zsh                     	  53151
+github              	gitignore                     	  49763
+mathiasbynens       	dotfiles                      	  16626
+gmarik              	Vundle.vim                    	  14751
+syl20bnr            	spacemacs                     	  11670
+spf13               	spf13-vim                     	  10318
+tpope               	vim-pathogen                  	   9038
+zsh-users           	prezto                        	   7528
+junegunn            	vim-plug                      	   7349
+carlhuda            	janus                         	   7284
+Bash-it             	bash-it                       	   6136
+lra                 	mackup                        	   6020
+skwp                	dotfiles                      	   5370
+holman              	dotfiles                      	   4448
+bbatsov             	prelude                       	   3398
+zsh-users           	antigen                       	   3084
+nojhan              	liquidprompt                  	   3050
+unixorn             	awesome-zsh-plugins           	   2680
+fisherman           	fisherman                     	   2259
+oh-my-fish          	oh-my-fish                    	   2166
+Shougo              	neobundle.vim                 	   2069
+technicalpickles    	homesick                      	   1882
+webpro              	awesome-dotfiles              	   1755
+zsh-users           	zsh-completions               	   1566
+thoughtbot          	rcm                           	   1515
+zplug               	zplug                         	   1511
+jwiegley            	use-package                   	   1491
+caiogondim          	bullet-train-oh-my-zsh-theme  	   1270
+RichiH              	vcsh                          	   1266
+cowboy              	dotfiles                      	   1097
+anishathalye        	dotbot                        	   1078
+andsens             	homeshick                     	   1044
+simonwhitaker       	gitignore-boilerplates        	    967
+cask                	cask                          	    827
+freshshell          	fresh                         	    778
+tarjoilija          	zgen                          	    740
+paulmillr           	dotfiles                      	    661
+dotfiles            	dotfiles.github.com           	    634
+eduardolundgren     	dotfiles                      	    421
+dotphiles           	dotphiles                     	    400
+atomantic           	dotfiles                      	    294
+philips             	ghar                          	    246
+michaeljsmalley     	dotfiles                      	    197
+sapegin             	dotfiles                      	    170
+Tarrasch            	antigen-hs                    	    164
+driesvints          	dotfiles                      	    138
+nicksp              	dotfiles                      	    132
+dotphiles           	dotzsh                        	    129
+dotphiles           	dotsync                       	    124
+svetlyak40wt        	dotfiler                      	    122
+changs              	slimzsh                       	    118
+ellipsis            	ellipsis                      	    110
+FooSoft             	homemaker                     	    104
+dotphiles           	dotvim                        	    100
+unixorn             	zsh-quickstart-kit            	     96
+jh3y                	kody                          	     65
+pearl-core          	pearl                         	     57
+NorfairKing         	super-user-spark              	     56
+wking               	dotfiles-framework            	     46
+andschwa            	dotfiles                      	     35
+Kraymer             	F-dotfiles                    	     34
+jglovier            	dotfiles-logo                 	     27
+ashishb             	dotfiles                      	     27
+vibhavp             	dotty                         	     24
+posquit0            	dotfiles                      	     22
+moonglum            	exogenesis                    	     15
+jeffaco             	dotfiles                      	     15
+deadc0de6           	dotdrop                       	     13
+williamsmj          	stowsh                        	     10
+rkalis              	dotfiles                      	      6
+mihaliak            	dotfiles                      	      4
+wking               	dotfiles-public               	      3
+bndabbs             	dotfiles                      	      2
