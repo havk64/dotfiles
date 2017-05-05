@@ -31,11 +31,13 @@ fetch_stars()
 {
 	response=$(curl -sL -A "$user_agent" -H "$header" -H "$accept" "$1" |
 	sed -E 's/.*stargazers_count":([[:digit:]]+).*/\1/')
-	printf '%-40s\t%7s\n' "${1:29}" "$response"
+	owner=$(sed -E 's/([^/]+)\/.*/\1/' <<< "${1:29}")
+	repo=$(sed -E 's/[^/]+\/(.*)/\1/' <<< "${1:29}")
+	printf '%-20s\t%-30s\t%7s\n' "$owner" "$repo" "$response"
 }
 
 while read -r line; do
 	fetch_stars "$line" &
-done <  <(mainpage) | sort -nrk 2 | uniq # > "$output" # Optionally prints a report
+done <  <(mainpage) | sort -nrk 3 | uniq # > "$output" # Optionally prints a report
 
 exit
