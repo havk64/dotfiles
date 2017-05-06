@@ -20,8 +20,6 @@ mainpage() {
 	sed -nE '{
 	# Match only valid github repositories:
 	/https?:\/\/github.com\/[[:alnum:].-]+\/[[:alnum:].-]+\/?$/!d
-	# Fix schema url(https):
-	/^http:/s/http/https/
 	# Format the url to fetch each github repo page using github API
 	s/https:../&api./
 	s/github\.com\//&repos\//
@@ -49,6 +47,9 @@ while read -r line; do
 	fetch_stars "$line" &
 done <  <(mainpage) | sort -nrk 3 | uniq |
 # Insert the header before the first line
-sed '1 i\'$'\n'"$head" # > "$output" # Optionally prints a report
+sed -n "
+1 i\\
+$head
+p" # > "$output" # Optionally prints a report
 
 exit
