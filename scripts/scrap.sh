@@ -11,6 +11,7 @@ user_agent=havk64
 header="Authorization: token $token"
 accept='Accept: application/vnd.github.v3+json'
 dotfiles='http://dotfiles.github.io/'
+formatting='%-20s\t%-20s\t%7s\t\t%s\n'
 output=result.out
 
 mainpage() {
@@ -26,7 +27,6 @@ mainpage() {
 	s/\/$//g
 	p
 	}'
-
 }
 
 fetch_stars()
@@ -36,11 +36,12 @@ fetch_stars()
 	sed -E 's/.*stargazers_count":([[:digit:]]+).*/\1/')
 	owner=$(sed -E 's/([^/]+)\/.*/\1/' <<< "${1:29}")
 	repo=$(sed -E 's/[^/]+\/(.*)/\1/' <<< "${1:29}")
-	printf '%-20s\t%-30s\t%7s\n' "$owner" "$repo" "$response"
+	URL="https://github.com/${1:29}"
+	printf "$formatting" "$owner" "$repo" "$response" "$URL"
 }
 
 # Assing to 'head' variable the format of output(similar to sprintf)
-printf -v head '%-20s\t%-30s\t%7s\n' "Owner" "Repository" "Number of Stars"
+printf -v head "$formatting" "Owner" "Repository" "Number of Stars" "URL"
 
 # Parses/fetches each github repo in sequence(using process substitution) async
 while read -r line; do
