@@ -31,13 +31,13 @@ https://github.com/robbyrussell/oh-my-zsh
 https://github.com/Tarrasch/antigen-hs
 https://github.com/dotphiles/dotzsh
 https://github.com/robbyrussell/oh-my-zsh
-https://github.com/zsh-users/prezto
+https://github.com/sorin-ionescu/prezto
 https://github.com/changs/slimzsh
 https://github.com/tarjoilija/zgen
 https://github.com/zplug/zplug
 https://github.com/unixorn/zsh-quickstart-kit
 https://github.com/zsh-users/zsh-completions
-https://github.com/caiogondim/bullet-train-oh-my-zsh-theme
+https://github.com/caiogondim/bullet-train.zsh
 https://github.com/unixorn/awesome-zsh-plugins
 https://github.com/zsh-users/antigen
 https://github.com/robbyrussell/oh-my-zsh
@@ -49,7 +49,7 @@ https://github.com/jwiegley/use-package
 https://github.com/carlhuda/janus
 https://github.com/Shougo/neobundle.vim
 https://github.com/tpope/vim-pathogen/
-https://github.com/gmarik/Vundle.vim
+https://github.com/VundleVim/Vundle.vim
 https://github.com/junegunn/vim-plug
 https://github.com/dotphiles/dotvim
 https://github.com/spf13/spf13-vim
@@ -76,6 +76,6 @@ https://github.com/RichiH/vcsh
 https://github.com/driesvints/dotfiles
 https://github.com/michaeljsmalley/dotfiles
 https://github.com/github/gitignore
-https://github.com/simonwhitaker/gitignore-boilerplates
+https://github.com/simonwhitaker/gibo
 https://github.com/dotfiles/dotfiles.github.com
 https://github.com/jglovier/dotfiles-logo/
