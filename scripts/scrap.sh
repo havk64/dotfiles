@@ -22,9 +22,7 @@ mainpage() {
 	# Match only valid github repositories:
 	/https?:\/\/github.com\/[[:alnum:].-]+\/[[:alnum:].-]+\/?$/!d
 	# Format the url to fetch each github repo page using github API
-	s/https:../&api./
-	s/github\.com\//&repos\//
-	s/\/$//g
+	s/(https:..)(github\.com\/)/\1api.\2repos\//
 	p
 	}'
 }
