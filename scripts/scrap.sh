@@ -5,6 +5,8 @@
 #
 # Pup is required in order to parse the links:
 # $ go get github.com/ericchiang/pup
+# Ignoring shellcheck warning:
+# shellcheck disable=SC2059
 
 token="${GITHUB_TOKEN}" # Defined as an environment variable
 user_agent=havk64
