@@ -324,6 +324,13 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (defun text-to-speech (point mark)
+    "Speaks selected region of text using MacOs 'text to speech' feature
+It uses interactive option 'r' to get the beginning and end of a region(selection)
+and 'shell-command-on-region' function to call the 'say' command on the selected region
+This function is bound to 'SPC x s' keychord"
+    (interactive "r")
+    (shell-command-on-region point mark "say"))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
