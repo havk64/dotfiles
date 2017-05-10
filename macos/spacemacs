@@ -330,7 +330,7 @@ It uses interactive option 'r' to get the beginning and end of a region(selectio
 and 'shell-command-on-region' function to call the 'say' command on the selected region
 This function is bound to 'SPC x s' keychord"
     (interactive "r")
-    (shell-command-on-region point mark "say"))
+    (call-process-region point mark "say" nil 0))
   ;; Add keybinding for 'text-to-speech' function behind the <Leader> key
   (spacemacs/set-leader-keys "xs" 'text-to-speech)
   )
