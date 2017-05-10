@@ -331,6 +331,7 @@ and 'shell-command-on-region' function to call the 'say' command on the selected
 This function is bound to 'SPC x s' keychord"
     (interactive "r")
     (shell-command-on-region point mark "say"))
+  ;; Add keybinding for 'text-to-speech' function behind the <Leader> key
   (spacemacs/set-leader-keys "xs" 'text-to-speech)
   )
 
