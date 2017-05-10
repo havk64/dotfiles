@@ -1,7 +1,10 @@
+### Set vi-style on command prompt
+set -o vi
+
 #added to fix node.js installation:
 export PATH="$PATH:$HOME/.node/bin"
 
-### Added for PostgreSQL run locally
+### Added to allow PostgreSQL run locally
 ### export DATABASE_URL=postgres:///$(whoami)
 
 ### Added by me for liquidprompt
