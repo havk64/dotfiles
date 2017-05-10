@@ -331,6 +331,7 @@ and 'shell-command-on-region' function to call the 'say' command on the selected
 This function is bound to 'SPC x s' keychord"
     (interactive "r")
     (shell-command-on-region point mark "say"))
+  (spacemacs/set-leader-keys "xs" 'text-to-speech)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
