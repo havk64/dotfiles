@@ -324,13 +324,13 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (defun text-to-speech (point mark)
+  (defun text-to-speech (start end)
     "Speaks selected region of text using MacOs 'text to speech' feature
 It uses interactive option 'r' to get the beginning and end of a region(selection)
 and 'shell-command-on-region' function to call the 'say' command on the selected region
 This function is bound to 'SPC x s' keychord"
     (interactive "r")
-    (call-process-region point mark "say" nil 0))
+    (call-process-region start end "say" nil 0))
   ;; Add keybinding for 'text-to-speech' function behind the <Leader> key
   (spacemacs/set-leader-keys "xs" 'text-to-speech)
   )
