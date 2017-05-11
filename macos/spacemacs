@@ -53,6 +53,7 @@ values."
      (org :variables
           org-enable-github-support t
           org-projectile-file "TODOs.org"
+          org-startup-indented t
           org-enable-reveal-js-support t)
      (shell :variables
             shell-default-shell 'ansi-term
