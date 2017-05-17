@@ -52,7 +52,7 @@ values."
           git-magit-status-fullscreen t)
      (colors :variables
                colors-colorize-identifiers 'variables
-               colors-enable-nyan-cat-progress-bar t)
+               colors-enable-nyan-cat-progress-bar nil)
      ;; markdown
      (org :variables
           org-enable-github-support t
