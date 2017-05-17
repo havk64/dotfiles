@@ -50,7 +50,9 @@ values."
      emacs-lisp
      (git :variables
           git-magit-status-fullscreen t)
-     colors
+     (colors :variables
+               colors-colorize-identifiers 'variables
+               colors-enable-nyan-cat-progress-bar t)
      ;; markdown
      (org :variables
           org-enable-github-support t
