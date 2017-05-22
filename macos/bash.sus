@@ -6,4 +6,5 @@ card bash {
 	.gitconfig
 	.vimrc
 	ycm_extra_conf.py -> .config/nvim/.ycm_extra_conf.py
+  inspect.sh -> /usr/local/bin/isp
 }
