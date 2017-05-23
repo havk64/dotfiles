@@ -48,6 +48,7 @@ values."
      emacs-lisp
      (git :variables
           git-magit-status-fullscreen t)
+     gnus
      html
      markdown
      (org :variables
