@@ -34,11 +34,6 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     (osx :variables
-          osx-dictionary-dictionary-choice "English")
-     vimscript
-     markdown
-     html
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -47,28 +42,32 @@ values."
      ;; ivy
      auto-completion
      ;; better-defaults
+     (colors :variables
+             colors-colorize-identifiers 'variables
+             colors-enable-nyan-cat-progress-bar nil)
      emacs-lisp
      (git :variables
           git-magit-status-fullscreen t)
-     (colors :variables
-               colors-colorize-identifiers 'variables
-               colors-enable-nyan-cat-progress-bar nil)
-     ;; markdown
+     html
+     markdown
      (org :variables
           org-enable-github-support t
           org-projectile-file "TODOs.org"
           org-startup-indented t
           org-enable-reveal-js-support t)
+     (osx :variables
+          osx-dictionary-dictionary-choice "English")
      (shell :variables
             shell-default-shell 'ansi-term
             shell-defaul-term-shell "/bin/bash"
             shell-enable-smart-eshell t
             shell-default-height 30
             shell-default-position 'bottom)
+     smex
      ;; spell-checking
      syntax-checking
      version-control
-     smex
+     vimscript
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
