@@ -42,6 +42,7 @@ values."
      ;; ivy
      auto-completion
      ;; better-defaults
+     (c-c++ :variables c-c++-enable-clang-support t)
      (colors :variables
              colors-colorize-identifiers 'variables
              colors-enable-nyan-cat-progress-bar nil)
@@ -58,6 +59,7 @@ values."
           org-enable-reveal-js-support t)
      (osx :variables
           osx-dictionary-dictionary-choice "English")
+     semantic
      (shell :variables
             shell-default-shell 'ansi-term
             shell-defaul-term-shell "/bin/bash"
