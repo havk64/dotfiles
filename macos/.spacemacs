@@ -327,14 +327,11 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (defvar spaceline-org-clock-p)
   (defvar org-todo-keywords)
   (setq-default git-magit-status-fullscreen t)
-  (setq gnus-secondary-select-methods
-        '(
-          (nntp "gmane"
-                (nntp-address "news.gmane.org"))
-          (nntp "news.eternal-september.org")
-          (nntp "nntp.aioe.org")
-          (nntp "news.gwene.org")
-          ))
+  (setq gnus-secondary-select-methods '((nntp "gmane"
+                                              (nntp-address "news.gmane.org"))
+                                        (nntp "news.eternal-september.org")
+                                        (nntp "nntp.aioe.org")
+                                        (nntp "news.gwene.org")))
   (setq org-todo-keywords
         '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
   (setq spaceline-org-clock-p t)
