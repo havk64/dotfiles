@@ -353,7 +353,7 @@ This function is bound to 'SPC x s' keychord"
     (call-process-region start end "say" nil 0))
   ;; Add keybinding for 'text-to-speech' function behind the <Leader> key
   (spacemacs/set-leader-keys "xs" 'text-to-speech)
-
+  ;; Enable org-lint as Flycheck syntax checker
   (defun flycheck-org-lint-start (checker callback)
     (funcall
      callback 'finished
@@ -367,9 +367,8 @@ This function is bound to 'SPC x s' keychord"
         ;; Modification as suggested by =map7= user
         (org-lint '(link-to-local-file))
         ;; Original solution:
-        ;;(org-lint-link-to-local-file (org-element-parse-buffer))
+        ;; (org-lint-link-to-local-file (org-element-parse-buffer))
         ))))
-
   (flycheck-define-generic-checker 'org-lint
     "Syntax checker for org-lint."
     :start 'flycheck-org-lint-start
