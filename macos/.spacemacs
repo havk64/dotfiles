@@ -352,6 +352,8 @@ This function is bound to 'SPC x s' keychord"
     (interactive "r")
     (call-process-region start end "say" nil 0))
   ;; Add keybinding for 'text-to-speech' function behind the <Leader> key
+  ;; Avoid compilation warnings about function definition
+  (declare-function spacemacs/set-leader-keys "core-keybindings.el")
   (spacemacs/set-leader-keys "xs" 'text-to-speech)
   )
 
