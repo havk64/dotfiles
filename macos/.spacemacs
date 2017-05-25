@@ -322,6 +322,10 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  ;; Avoid free variable warning
+  (defvar gnus-secondary-select-methods)
+  (defvar spaceline-org-clock-p)
+  (defvar org-todo-keywords)
   (setq-default git-magit-status-fullscreen t)
   (setq gnus-secondary-select-methods
         '(
