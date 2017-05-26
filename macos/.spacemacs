@@ -375,6 +375,6 @@ This function is bound to 'SPC x s' keychord"
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(provide '.spacemacs)
+(provide (quote .spacemacs))
 
 ;;; .spacemacs ends here
