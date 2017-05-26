@@ -355,6 +355,7 @@ This function is bound to 'SPC x s' keychord"
   ;; Avoid compilation warnings about function definition
   (declare-function spacemacs/set-leader-keys "core-keybindings.el")
   (spacemacs/set-leader-keys "xs" (quote text-to-speech))
+  (spacemacs/set-leader-keys "." (quote repeat-complex-command))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
