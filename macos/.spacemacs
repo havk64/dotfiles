@@ -44,7 +44,7 @@ values."
      ;; better-defaults
      (c-c++ :variables c-c++-enable-clang-support t)
      (colors :variables
-             colors-colorize-identifiers 'variables
+             colors-colorize-identifiers (quote variables)
              colors-enable-nyan-cat-progress-bar nil)
      emacs-lisp
      (git :variables
@@ -61,7 +61,7 @@ values."
           osx-dictionary-dictionary-choice "English")
      semantic
      (shell :variables
-            shell-default-shell 'ansi-term
+            shell-default-shell (quote ansi-term)
             shell-defaul-term-shell "/bin/bash"
             shell-enable-smart-eshell t
             shell-default-height 30
@@ -354,7 +354,7 @@ This function is bound to 'SPC x s' keychord"
   ;; Add keybinding for 'text-to-speech' function behind the <Leader> key
   ;; Avoid compilation warnings about function definition
   (declare-function spacemacs/set-leader-keys "core-keybindings.el")
-  (spacemacs/set-leader-keys "xs" 'text-to-speech)
+  (spacemacs/set-leader-keys "xs" (quote text-to-speech))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
