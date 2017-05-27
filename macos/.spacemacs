@@ -356,6 +356,8 @@ This function is bound to 'SPC x s' keychord"
   (declare-function spacemacs/set-leader-keys "core-keybindings.el")
   (spacemacs/set-leader-keys "xs" (quote text-to-speech))
   (spacemacs/set-leader-keys "." (quote repeat-complex-command))
+  ;; Set history-length to true so it don't truncate the command history
+  (setq history-length t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
