@@ -358,6 +358,9 @@ This function is bound to 'SPC x s' keychord"
   (spacemacs/set-leader-keys "." (quote repeat-complex-command))
   ;; Set history-length to true so it don't truncate the command history
   (setq history-length t)
+  ;; Use org struct minor mode on Outline and Message modes
+  (add-hook 'outline-mode-hook 'turn-on-orgstruct++)
+  (add-hook 'message-mode-hook 'turn-on-orgstruct++)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
