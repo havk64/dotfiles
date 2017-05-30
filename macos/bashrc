@@ -1,6 +1,9 @@
 ### Set vi-style on command prompt
 set -o vi
 
+### Set locale
+export LC_ALL=en_US.UTF-8
+
 #added to fix node.js installation:
 export PATH="$PATH:$HOME/.node/bin"
 
