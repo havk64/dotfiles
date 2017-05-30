@@ -61,7 +61,7 @@ values."
           osx-dictionary-dictionary-choice "English")
      semantic
      (shell :variables
-            shell-default-shell (quote ansi-term)
+            shell-default-shell (quote eshell)
             shell-defaul-term-shell "/bin/bash"
             shell-enable-smart-eshell t
             shell-default-height 30
