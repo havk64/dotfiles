@@ -333,7 +333,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
                                         (nntp "nntp.aioe.org")
                                         (nntp "news.gwene.org")))
   (setq org-todo-keywords
-        '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))
+        '((sequence "TODO" "WAITING" "IN-PROGRESS" "|" "DONE" "DELEGATED")))
   (setq spaceline-org-clock-p t)
   )
 
