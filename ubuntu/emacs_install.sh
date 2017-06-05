@@ -21,3 +21,4 @@ tar zxvf "$(basename $emacs_dist)"
 sudo apt-get install -y libncurses5-dev
 [[ -f configure ]] && ./configure
 make
+sudo make install
