@@ -9,7 +9,9 @@ emacs_dir="$(basename $emacs_dist)"
 mkdir ~/emacs_src && cd "$emacs_src" || exit
 curl -O "$emacs_dist" 
 curl -O "$sig_file"
-# TODO check signature
+# Check pgp signature
+gpg --recv-keys 7C207910
+gpg --verify "$(basename $sig_file)" "$(basename $emacs_dist)"
 tar zxvf "$(basename $emacs_dist)"
 [[ -d $emacs_dir ]] && cd "$emacs_dir" || exit
 [[ -f configure ]] && ./configure
