@@ -18,5 +18,6 @@ gpg --recv-keys 7C207910
 gpg --verify "$(basename $sig_file)" "$(basename $emacs_dist)"
 tar zxvf "$(basename $emacs_dist)"
 [[ -d $emacs_dir ]] && cd "$emacs_dir" || bye
+sudo apt-get install -y libncurses5-dev
 [[ -f configure ]] && ./configure
 make
