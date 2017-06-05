@@ -4,7 +4,7 @@
 emacs_dist=ftp://ftp.gnu.org/pub/gnu/emacs/emacs-25.2.tar.gz
 sig_file=ftp://ftp.gnu.org/pub/gnu/emacs/emacs-25.2.tar.gz.sig
 emacs_src=~/emacs_src
-emacs_dir="$(basename $emacs_dist)"
+emacs_dir="emacs-25.2/"
 
 bye() {
     echo "Failed!"
