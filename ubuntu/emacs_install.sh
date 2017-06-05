@@ -11,7 +11,7 @@ bye() {
     exit
 }
 mkdir ~/emacs_src && cd "$emacs_src" || bye
-curl -O "$emacs_dist" 
+curl -O "$emacs_dist"
 curl -O "$sig_file"
 # Check pgp signature
 gpg --recv-keys 7C207910
