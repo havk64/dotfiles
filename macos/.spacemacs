@@ -42,7 +42,10 @@ values."
      ;; ivy
      auto-completion
      ;; better-defaults
-     (c-c++ :variables c-c++-enable-clang-support t)
+     (c-c++ :variables
+            c-c++-enable-clang-support t
+            c-default-style "bsd"
+            c-basic-offset 8)
      (colors :variables
              colors-colorize-identifiers (quote variables)
              colors-enable-nyan-cat-progress-bar nil)
