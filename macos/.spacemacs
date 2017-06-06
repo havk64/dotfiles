@@ -362,7 +362,7 @@ This function is bound to 'SPC x s' keychord"
   (spacemacs/set-leader-keys "." (quote repeat-complex-command))
   ;; Set history-length to true so it don't truncate the command history
   (setq history-length t)
-  ;; Set indent using tab by default
+  ;; Add hook on C common mode for set indentation just for C code
   (add-hook 'c-mode-common-hook
             '(lambda ()
                (setq-default
