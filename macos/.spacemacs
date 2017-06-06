@@ -362,6 +362,12 @@ This function is bound to 'SPC x s' keychord"
   (spacemacs/set-leader-keys "." (quote repeat-complex-command))
   ;; Set history-length to true so it don't truncate the command history
   (setq history-length t)
+  ;; Set indent using tab by default
+  (add-hook 'c-mode-common-hook
+            '(lambda ()
+               (setq-default
+                tab-width 8
+                indent-tabs-mode t)))
   ;; Use org struct minor mode on Outline and Message modes
   (add-hook 'outline-mode-hook 'turn-on-orgstruct++)
   (add-hook 'message-mode-hook 'turn-on-orgstruct++)
