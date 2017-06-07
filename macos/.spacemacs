@@ -381,6 +381,9 @@ This function is bound to 'SPC x s' keychord"
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(after-save-hook
+   (quote
+    (executable-make-buffer-file-executable-if-script-p helm-css-scss--clear-cache helm-swoop--clear-cache)))
  '(eshell-modules-list
 	 (quote
 		(eshell-alias eshell-banner eshell-basic eshell-cmpl eshell-dirs eshell-glob eshell-hist eshell-ls eshell-pred eshell-prompt eshell-script eshell-term eshell-tramp eshell-unix)))
