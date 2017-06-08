@@ -62,8 +62,7 @@ values."
           org-enable-github-support t
           org-projectile-file "TODOs.org"
           org-startup-indented t
-          org-enable-reveal-js-support t
-          org-use-speed-commands t)
+          org-enable-reveal-js-support t)
      (osx :variables
           osx-dictionary-dictionary-choice "English")
      semantic
