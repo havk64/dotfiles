@@ -1,10 +1,12 @@
-;;; Spacemacs --- Summary
+;;; .spacemacs --- Spacemacs config file -*- mode: emacs-lisp -*-
+
 ;;; Commentary:
-;; -*- mode: emacs-lisp -*-
+
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
 ;;; Code:
+
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration.
 You should not put any user code in this function besides modifying the variable
@@ -400,6 +402,6 @@ This function is bound to 'SPC x s' keychord"
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(provide (quote .spacemacs))
 
+(provide (quote .spacemacs))
 ;;; .spacemacs ends here
