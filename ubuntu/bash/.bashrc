@@ -119,8 +119,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-### Include path to cabal binaries
-PATH="$HOME/.cabal/bin:$PATH"
+PATH="$HOME/.cabal/bin:/opt/cabal/1.22/bin:/opt/ghc/7.10.2/bin:$PATH"
 
 ### Added by me for liquidprompt
 [[ $- = *i* ]] && source "$HOME/liquidprompt/liquidprompt"
