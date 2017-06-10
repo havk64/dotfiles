@@ -37,7 +37,6 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      (c-c++ :variables
-            c-c++-enable-clang-support t
             c-default-style "bsd"
             c-basic-offset 8)
      ;; auto-completion
