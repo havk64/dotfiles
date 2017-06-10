@@ -8,8 +8,8 @@ case $- in
       *) return;;
 esac
 
-### Added by Toptal tips:
-### (Share the bash history across multiple sessions)
+### From Toptal tips:
+### Share the bash history across multiple sessions
 HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
