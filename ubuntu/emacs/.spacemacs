@@ -319,8 +319,8 @@ you should place your code here."
   (add-hook 'c-mode-common-hook
 	    '(lambda ()
 	       (setq-default
-		tab-width 8
-		indent-tabs-mode t)))
+          tab-width 8
+          indent-tabs-mode t)))
   (load "~/.emacs.d/private/local/betty-style")
   (add-to-list 'flycheck-checkers 'betty-style)
   )
