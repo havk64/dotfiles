@@ -321,6 +321,8 @@ you should place your code here."
           tab-width 8
           indent-tabs-mode t)))
   (load "~/.emacs.d/private/local/betty-style")
+  ;; Load betty-style C syntax checker
+  ;; Add betty-style to the list of Flycheck checkers
   (add-to-list 'flycheck-checkers 'betty-style)
   )
 
@@ -331,6 +333,7 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ ;; Add the =pedantic flag to gcc on Flycheck
  '(flycheck-gcc-pedantic t)
  '(after-save-hook
    (quote
