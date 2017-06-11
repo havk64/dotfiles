@@ -370,8 +370,11 @@ This function is bound to 'SPC x s' keychord"
                (setq-default
                 tab-width 8
                 indent-tabs-mode t)))
+  ;; Load betty-style C syntax checker
   (load "~/.emacs.d/private/local/betty-style")
+  ;; Add betty-style to the list of Flycheck checkers
   (add-to-list 'flycheck-checkers 'betty-style)
+  ;; Add the flag -Werror to gcc on Flycheck
   (add-to-list 'flycheck-gcc-warnings "error")
   ;; Use org struct minor mode on Outline and Message modes
   (add-hook 'outline-mode-hook 'turn-on-orgstruct++)
