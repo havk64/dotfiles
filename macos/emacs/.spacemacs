@@ -372,6 +372,7 @@ This function is bound to 'SPC x s' keychord"
                 indent-tabs-mode t)))
   (load "~/.emacs.d/private/local/betty-style")
   (add-to-list 'flycheck-checkers 'betty-style)
+  (add-to-list 'flycheck-gcc-warnings "error")
   ;; Use org struct minor mode on Outline and Message modes
   (add-hook 'outline-mode-hook 'turn-on-orgstruct++)
   (add-hook 'message-mode-hook 'turn-on-orgstruct++)
