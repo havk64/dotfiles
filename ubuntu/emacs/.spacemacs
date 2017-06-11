@@ -324,6 +324,9 @@ you should place your code here."
   ;; Load betty-style C syntax checker
   ;; Add betty-style to the list of Flycheck checkers
   (add-to-list 'flycheck-checkers 'betty-style)
+  (dolist
+      (flag '("error" "extra" "all"))
+    (add-to-list 'flycheck-gcc-warnings flag))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
