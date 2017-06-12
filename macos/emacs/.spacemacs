@@ -65,6 +65,7 @@ values."
           org-enable-reveal-js-support t)
      (osx :variables
           osx-dictionary-dictionary-choice "English")
+     python
      semantic
      (shell :variables
             shell-default-shell (quote eshell)
