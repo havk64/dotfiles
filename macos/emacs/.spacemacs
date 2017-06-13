@@ -377,7 +377,7 @@ This function is bound to 'SPC x s' keychord"
   ;; Add betty-style to the list of Flycheck checkers
   (add-to-list 'flycheck-checkers 'betty-style)
   ;; Add the flag -Werror to gcc on Flycheck
-  (add-to-list 'flycheck-gcc-warnings "error")
+  (add-to-list 'flycheck-gcc-warnings "error" t)
   ;; Use org struct minor mode on Outline and Message modes
   (add-hook 'outline-mode-hook 'turn-on-orgstruct++)
   (add-hook 'message-mode-hook 'turn-on-orgstruct++)
