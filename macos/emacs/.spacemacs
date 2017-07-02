@@ -56,6 +56,10 @@ values."
      (git :variables
           git-magit-status-fullscreen t)
      gnus
+     (go :variables
+         gofmt-command "goimports"
+         go-use-gometalinter t
+         flycheck-gometalinter-deadline "15s")
      html
      finance
      markdown
