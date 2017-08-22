@@ -387,8 +387,8 @@ This function is bound to 'SPC x s' keychord"
   ;; Add the flag -Werror to gcc on Flycheck
   (add-to-list 'flycheck-gcc-warnings "error" t)
   ;; Use org struct minor mode on Outline and Message modes
-  (add-hook 'outline-mode-hook 'turn-on-orgstruct++)
-  (add-hook 'message-mode-hook 'turn-on-orgstruct++)
+  ;; (add-hook 'outline-mode-hook 'turn-on-orgstruct++)
+  ;; (add-hook 'message-mode-hook 'turn-on-orgstruct++)
   ;; Add Cucumber.el to the load path
   (add-to-list 'load-path "~/.emacs.d/private/feature-mode")
   ;; Require feature-mode
