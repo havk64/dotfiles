@@ -396,7 +396,6 @@ This function is bound to 'SPC x s' keychord"
   ;; Add to auto-mode alist
   (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
   )
-
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables
