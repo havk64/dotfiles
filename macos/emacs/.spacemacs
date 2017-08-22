@@ -71,6 +71,7 @@ values."
      (osx :variables
           osx-dictionary-dictionary-choice "English")
      python
+     ruby
      semantic
      (shell :variables
             shell-default-shell (quote eshell)
