@@ -5,3 +5,5 @@ target=~/
 
 stow bash -t $target -vvv
 stow emacs -t $target -vvv
+
+exit
