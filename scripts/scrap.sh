@@ -14,7 +14,7 @@ header="Authorization: token $token"
 accept='Accept: application/vnd.github.v3+json'
 dotfiles='http://dotfiles.github.io/'
 formatting='%-20s\t%-20s\t%7s\t\t%s\n'
-output=result.out
+output=report.log
 
 mainpage() {
 	# Extract urls from html using 'pup':
