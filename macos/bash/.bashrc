@@ -45,6 +45,10 @@ export HISTFILESIZE=
 # Included by homebrew
 export PATH="/usr/local/sbin:$PATH"
 
+# Included for GPG Tools
+GPG_TTY=$(tty)
+export GPG_TTY
+
 . /Users/alexandro/torch/install/bin/torch-activate
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
